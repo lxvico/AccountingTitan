@@ -1,2 +1,4 @@
 .DS_Store
 exports/*.zip
+.wrangler/
+node_modules/
