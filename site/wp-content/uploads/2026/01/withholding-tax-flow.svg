@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520">
+  <!-- Definitions -->
+  <defs>
+    <!-- Drop Shadow Filter -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Gradient for boxes -->
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a90e2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2541bc;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="lightBlueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e3f2fd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#bbdefb;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f5e9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c8e6c9;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Arrow markers -->
+    <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto">
+      <path d="M2,2 L2,11 L10,6 L2,2" fill="#2541bc"/>
+    </marker>
+    
+    <marker id="arrowRed" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto">
+      <path d="M2,2 L2,11 L10,6 L2,2" fill="#e53935"/>
+    </marker>
+  </defs>
+  
+  <!-- Background with subtle gradient -->
+  <rect width="900" height="520" fill="#ffffff"/>
+  
+  <!-- Title Section -->
+  <rect x="0" y="0" width="900" height="70" fill="url(#blueGrad)"/>
+  <text x="450" y="45" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="700" text-anchor="middle" fill="#ffffff">
+    Withholding Tax Payment Flow
+  </text>
+  
+  <!-- Payer Box -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="160" width="220" height="140" fill="url(#lightBlueGrad)" stroke="#2541bc" stroke-width="3" rx="12"/>
+    <circle cx="170" cy="195" r="25" fill="#2541bc" opacity="0.15"/>
+    <text x="170" y="202" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#1565c0">
+      💼
+    </text>
+  </g>
+  <text x="170" y="238" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#1565c0">
+    Payer
+  </text>
+  <text x="170" y="260" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" text-anchor="middle" fill="#424242">
+    ABC Canada Inc.
+  </text>
+  <text x="170" y="280" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" text-anchor="middle" fill="#666" font-style="italic">
+    Withholds tax from payment
+  </text>
+  
+  <!-- Payee Box -->
+  <g filter="url(#shadow)">
+    <rect x="620" y="160" width="220" height="140" fill="url(#lightBlueGrad)" stroke="#2541bc" stroke-width="3" rx="12"/>
+    <circle cx="730" cy="195" r="25" fill="#2541bc" opacity="0.15"/>
+    <text x="730" y="202" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#1565c0">
+      🏢
+    </text>
+  </g>
+  <text x="730" y="238" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#1565c0">
+    Non-Resident Payee
+  </text>
+  <text x="730" y="260" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" text-anchor="middle" fill="#424242">
+    ABC Switzerland AG
+  </text>
+  <text x="730" y="280" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" text-anchor="middle" fill="#666" font-style="italic">
+    Receives net amount
+  </text>
+  
+  <!-- Tax Authority Box -->
+  <g filter="url(#shadow)">
+    <rect x="340" y="370" width="220" height="120" fill="url(#greenGrad)" stroke="#43a047" stroke-width="3" rx="12"/>
+    <circle cx="450" cy="400" r="25" fill="#43a047" opacity="0.15"/>
+    <text x="450" y="407" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#2e7d32">
+      🏛️
+    </text>
+  </g>
+  <text x="450" y="438" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#2e7d32">
+    Tax Authority
+  </text>
+  <text x="450" y="460" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" text-anchor="middle" fill="#424242">
+    Canada Revenue Agency
+  </text>
+  
+  <!-- Arrow: Payer to Payee -->
+  <path d="M 280 220 L 620 220" stroke="#2541bc" stroke-width="4" fill="none" marker-end="url(#arrowBlue)" stroke-dasharray="none"/>
+  <rect x="390" y="185" width="140" height="30" fill="#2541bc" rx="15" filter="url(#shadow)"/>
+  <text x="460" y="206" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">
+    $90,000
+  </text>
+  <text x="460" y="175" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" text-anchor="middle" fill="#666">
+    Net Payment
+  </text>
+  
+  <!-- Arrow: Payer to Tax Authority -->
+  <path d="M 170 300 L 400 370" stroke="#e53935" stroke-width="4" fill="none" marker-end="url(#arrowRed)" stroke-dasharray="8,4"/>
+  <rect x="235" y="320" width="110" height="30" fill="#e53935" rx="15" filter="url(#shadow)"/>
+  <text x="290" y="341" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">
+    $10,000
+  </text>
+  <text x="290" y="310" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" text-anchor="middle" fill="#666">
+    Withholding Tax (10%)
+  </text>
+  
+  <!-- Total Amount Badge -->
+  <g filter="url(#shadow)">
+    <rect x="340" y="90" width="220" height="60" fill="#ffffff" stroke="#2541bc" stroke-width="3" rx="10"/>
+  </g>
+  <text x="450" y="115" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#666">
+    Total Interest Payment
+  </text>
+  <text x="450" y="136" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#2541bc">
+    $100,000
+  </text>
+</svg>

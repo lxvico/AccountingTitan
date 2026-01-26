@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650">
+  <!-- Definitions -->
+  <defs>
+    <!-- Drop Shadow Filter -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Gradients -->
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a90e2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2541bc;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="blueBox" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e3f2fd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#bbdefb;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="lightBlueBox" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#b3e5fc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#81d4fa;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="greenBox" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f5e9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c8e6c9;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="orangeBox" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff3e0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffe0b2;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Arrow marker -->
+    <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto">
+      <path d="M2,2 L2,11 L10,6 L2,2" fill="#2541bc"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1000" height="650" fill="#ffffff"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="1000" height="70" fill="url(#headerGrad)"/>
+  <text x="500" y="45" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="700" text-anchor="middle" fill="#ffffff">
+    Income Tax Expense &amp; Payment Process
+  </text>
+  
+  <!-- Step 1: Calculate -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="110" width="260" height="130" fill="url(#blueBox)" stroke="#2541bc" stroke-width="3" rx="12"/>
+  </g>
+  <circle cx="190" cy="140" r="20" fill="#2541bc" opacity="0.2"/>
+  <text x="190" y="148" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" text-anchor="middle" fill="#1565c0">
+    1
+  </text>
+  <text x="190" y="175" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#1565c0">
+    Calculate Tax Expense
+  </text>
+  <text x="190" y="200" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" text-anchor="middle" fill="#424242">
+    Pretax Income: $500,000
+  </text>
+  <text x="190" y="218" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" text-anchor="middle" fill="#424242">
+    Tax Rate: 25%
+  </text>
+  <rect x="130" y="225" width="120" height="8" fill="#e0e0e0" rx="4"/>
+  <text x="190" y="232" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#e53935">
+    = $125,000
+  </text>
+  
+  <!-- Arrow 1 to 2 -->
+  <path d="M 320 175 L 400 175" stroke="#2541bc" stroke-width="3" fill="none" marker-end="url(#arrowBlue)"/>
+  
+  <!-- Step 2: Record Entry -->
+  <g filter="url(#shadow)">
+    <rect x="400" y="110" width="260" height="130" fill="url(#lightBlueBox)" stroke="#2541bc" stroke-width="3" rx="12"/>
+  </g>
+  <circle cx="530" cy="140" r="20" fill="#2541bc" opacity="0.2"/>
+  <text x="530" y="148" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" text-anchor="middle" fill="#1565c0">
+    2
+  </text>
+  <text x="530" y="175" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#0277bd">
+    Record Journal Entry
+  </text>
+  <text x="530" y="198" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" text-anchor="middle" fill="#424242">
+    DR: Income Tax Expense
+  </text>
+  <text x="530" y="214" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" text-anchor="middle" fill="#424242">
+    CR: Income Tax Payable
+  </text>
+  <text x="530" y="232" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#666">
+    (Liability created on balance sheet)
+  </text>
+  
+  <!-- Arrow 2 to 3 -->
+  <path d="M 530 240 L 530 300" stroke="#2541bc" stroke-width="3" fill="none" marker-end="url(#arrowBlue)"/>
+  
+  <!-- Step 3: Pay Installments -->
+  <g filter="url(#shadow)">
+    <rect x="370" y="300" width="320" height="150" fill="url(#blueBox)" stroke="#2541bc" stroke-width="3" rx="12"/>
+  </g>
+  <circle cx="530" cy="335" r="20" fill="#2541bc" opacity="0.2"/>
+  <text x="530" y="343" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" text-anchor="middle" fill="#1565c0">
+    3
+  </text>
+  <text x="530" y="365" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#1565c0">
+    Pay Quarterly Installments
+  </text>
+  <text x="530" y="390" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" text-anchor="middle" fill="#424242">
+    Each Quarter: $50,000
+  </text>
+  <text x="530" y="410" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" text-anchor="middle" fill="#424242">
+    DR: Income Tax Payable $50,000
+  </text>
+  <text x="530" y="426" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" text-anchor="middle" fill="#424242">
+    CR: Cash $50,000
+  </text>
+  <text x="530" y="443" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#666">
+    (4 payments × $50,000 = $200,000 total)
+  </text>
+  
+  <!-- Impact Boxes -->
+  <text x="500" y="485" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#424242">
+    Financial Statement Impact
+  </text>
+  
+  <!-- Income Statement Impact -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="500" width="380" height="120" fill="url(#greenBox)" stroke="#43a047" stroke-width="3" rx="12"/>
+  </g>
+  <text x="250" y="525" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" text-anchor="middle" fill="#2e7d32">
+    📊 Income Statement
+  </text>
+  <text x="250" y="550" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" text-anchor="middle" fill="#424242">
+    Pretax Income: $500,000
+  </text>
+  <text x="250" y="570" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" text-anchor="middle" fill="#e53935">
+    Income Tax Expense: ($125,000)
+  </text>
+  <line x1="170" y1="577" x2="330" y2="577" stroke="#424242" stroke-width="1"/>
+  <text x="250" y="595" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#2e7d32">
+    Net Income: $375,000
+  </text>
+  
+  <!-- Balance Sheet Impact -->
+  <g filter="url(#shadow)">
+    <rect x="560" y="500" width="380" height="120" fill="url(#orangeBox)" stroke="#f57c00" stroke-width="3" rx="12"/>
+  </g>
+  <text x="750" y="525" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" text-anchor="middle" fill="#e65100">
+    📋 Balance Sheet
+  </text>
+  <text x="750" y="550" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" text-anchor="middle" fill="#424242">
+    Initial Tax Liability: $125,000
+  </text>
+  <text x="750" y="570" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" text-anchor="middle" fill="#e53935">
+    Installments Paid: ($200,000)
+  </text>
+  <line x1="670" y1="577" x2="830" y2="577" stroke="#424242" stroke-width="1"/>
+  <text x="750" y="595" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#1976d2">
+    Tax Receivable: $75,000
+  </text>
+</svg>
