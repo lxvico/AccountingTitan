@@ -11982,3 +11982,32 @@ h1, h2, h3, h4, h5, h6,
         padding-bottom: 16px;
     }
 }
+
+/* ---
+   Argus: hub-link box (static export safe)
+   Keeps styling theme-aligned and avoids inline styles in category hubs.
+--- */
+.argus-hub-links {
+    margin-top: 14px;
+    padding: 14px 16px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+}
+
+.argus-hub-links__title {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.argus-hub-links__list {
+    margin: 0;
+    padding-left: 18px;
+    line-height: 1.55;
+}
+
+.argus-hub-links__related {
+    margin-top: 10px;
+    color: #666;
+    font-size: 0.95em;
+}
